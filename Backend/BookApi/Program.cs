@@ -69,4 +69,11 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//Hosten kan inte starta SQL lite av sig själv, och har ingen egen DB just nu.
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();
+}
+
 app.Run();
