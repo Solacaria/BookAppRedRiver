@@ -45,7 +45,9 @@ builder.Services.AddAuthorization();
 builder.Services.AddCors(options => {
     options.AddPolicy("Frontend", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.WithOrigins(
+            "http://localhost:4200",
+            "https://flourishing-swan-d3e235.netlify.app")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
