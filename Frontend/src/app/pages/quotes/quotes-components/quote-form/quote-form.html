@@ -1,0 +1,52 @@
+<section class="panel">
+  <div class="panel-header">
+    <span class="kicker">Formulär</span>
+    <h2>{{ headline }}</h2>
+  </div>
+
+  @if (message) {
+    <p class="form-message">{{ message }}</p>
+  }
+
+  <form class="quote-form" (ngSubmit)="quoteSave()">
+    <label>
+      <span>Citat</span>
+      <textarea
+        rows="4"
+        name="text"
+        placeholder="Skriv ditt favoritcitat..."
+        [(ngModel)]="quote.text"></textarea>
+    </label>
+
+    <label>
+      <span>Författare</span>
+      <input
+        class="form-control"
+        type="text"
+        name="author"
+        placeholder="Författarens namn"
+        [(ngModel)]="quote.author">
+    </label>
+
+    <label>
+      <span>År</span>
+      <input
+        class="form-control"
+        type="text"
+        name="year"
+        placeholder="Unknown"
+        [(ngModel)]="quote.year">
+    </label>
+
+    <div class="card-actions">
+      <button type="submit" class="btn btn-primary">
+        <i class="fa-solid fa-floppy-disk"></i>
+        Spara citat
+      </button>
+      <button type="button" class="btn btn-outline-secondary" (click)="cancel()">
+        <i class="fa-solid fa-xmark"></i>
+        Avbryt
+      </button>
+    </div>
+  </form>
+</section>

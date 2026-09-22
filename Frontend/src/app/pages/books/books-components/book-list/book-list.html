@@ -1,0 +1,46 @@
+<section class="panel">
+  <div class="panel-header section-header">
+    <h2>Alla böcker</h2>
+    @if (books.length <= 9) {
+       <button type="button" class="btn btn-primary"
+      (click)="addFive()"
+      >
+      <i class="fa-utility fa-semibold fa-file"></i>
+      Lägg till 5 slumpade böcker</button>
+    }
+   
+    <span class="badge">{{books.length}} titlar</span>
+     @if (message) {
+    <p class="form-message">{{ message }}</p>
+  }
+  </div>
+
+  <div class="book-list">
+    @for (book of books; track book.id) {
+      <article class="book-card">
+        <div class="card-top">
+          <span>{{ book.publishedDate }} </span>
+        </div>
+
+        <h3>{{ book.title }}</h3>
+
+        <div class="meta-list">
+          <span><i class="fa-solid fa-user-pen"></i> {{ book.author }}</span>
+        </div>
+
+        <div class="card-actions">
+          <button type="button" class="btn btn-outline-secondary"
+            (click)="editBook(book)">
+            <i class="fa-solid fa-pen"></i>
+            Redigera
+          </button>
+          <button type="button" class="btn btn-primary"
+            (click)="deleteBook(book)">
+            <i class="fa-solid fa-trash"></i>
+            Radera
+          </button>
+        </div>
+      </article>
+    }
+  </div>
+</section>

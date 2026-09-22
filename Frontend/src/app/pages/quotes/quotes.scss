@@ -1,0 +1,24 @@
+.quote-grid {
+  align-items: start;
+}
+
+.quote-header {
+  margin-bottom: 1rem;
+}
+
+.quote-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.quote-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.quote-form label {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--ink);
+  font-weight: 700;
+}

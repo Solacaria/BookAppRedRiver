@@ -1,0 +1,42 @@
+<section class="auth-shell">
+  <div class="auth-card panel">
+    <div class="auth-icon">
+      <i class="fa-solid fa-user-lock"></i>
+    </div>
+
+    <div class="text-center mb-3">
+      <span class="kicker">Inloggning</span>
+      <h2>Välkommen</h2>
+    </div>
+
+    <form class="auth-form" (ngSubmit)="login()">
+      <label>
+        <span>Användarnamn</span>
+        <input class="form-control" type="text" placeholder="Användarnamn"
+          name="userName"
+          [(ngModel)]="user.userName" />
+      </label>
+
+      <label>
+        <span>Lösenord</span>
+        <input class="form-control" type="password" placeholder="********" 
+          name="password"
+          [(ngModel)]="user.password" />
+      </label>
+
+      <button type="submit" class="btn btn-primary login-button">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Logga in
+      </button>
+    </form>
+    
+    @if (message) {
+      <p class="form-message">{{ message }}</p>
+    }
+
+    <div class="auth-switch">
+      <span>Har du inget konto?</span>
+      <a href="/register" >Registrera dig</a>
+    </div>
+  </div>
+</section>

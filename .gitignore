@@ -1,0 +1,20 @@
+# Angular
+Frontend/node_modules/
+Frontend/dist/
+
+# .NET
+Backend/BookApi/**/bin/
+Backend/BookApi/**/obj/
+
+# Visual Studio
+.vs/
+
+# SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# Övriga filer
+Instructions.txt
+Migrate.txt
+Test_Instructions.txt

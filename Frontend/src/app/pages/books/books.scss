@@ -1,0 +1,19 @@
+.page-section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.toolbar {
+  display: grid;
+  justify-items: stretch;
+  gap: 1.25rem;
+}
+
+.btn-primary{
+  width: 15rem;
+}
+
+.toolbar > .btn,
+.books-grid {
+  align-items: start;
+}

@@ -1,0 +1,51 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+:root {
+  --bg-page: #f7f1e8;
+  --bg-panel: #fffdf9;
+  --bg-soft: #efe3d2;
+  --surface: #f1e3cb;
+  --ink: #2b231c;
+  --muted: #6b584c;
+  --accent: #a86d46;
+  --accent-strong: #7b4f30;
+  --accent-soft: #d6b08d;
+  --border: #2f241a;
+  --shadow: rgba(38, 27, 18, 0.12);
+  --success: #4a6b52;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #f9f2e7 0%, #f1e4d0 100%);
+  color: var(--ink);
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  margin-bottom: 0;
+}

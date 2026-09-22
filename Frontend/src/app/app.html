@@ -1,0 +1,35 @@
+
+<div class="app-shell" >
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-icon">
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+      <div class="brand-copy">
+        <span class="eyebrow">Red River</span>
+        <h1>Bokapp</h1>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a routerLink="/books" routerLinkActive="active">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <span>Böcker</span>
+      </a>
+      <a routerLink="/quotes" routerLinkActive="active">
+        <i class="fa-solid fa-quote-right"></i>
+        <span>Mina citat</span>
+      </a>
+      <a routerLink="/login" routerLinkActive="active">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span>Logga in</span>
+      </a>
+    </nav>
+
+  </header>
+
+  <main class="page-shell">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+

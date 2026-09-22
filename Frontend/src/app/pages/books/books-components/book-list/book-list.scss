@@ -1,0 +1,58 @@
+.panel-header {
+  margin-bottom: 1rem;
+}
+
+.badge {
+  color: rgb(0,0,0 );
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.book-card {
+  min-height: 100%;
+  padding: 1rem;
+  border: 3px solid var(--border);
+  border-radius: 18px;
+  background: var(--bg-panel);
+  box-shadow: 0 6px 0 var(--shadow);
+}
+
+.book-card h3,
+.book-card span {
+  color: var(--ink);
+}
+
+.book-card .badge {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.card-actions button {
+  margin: 0.33rem;
+}
+
+.form-message {
+  color: var(--accent-strong);
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  .book-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.book-card .meta-list span {
+  color: var(--muted);
+}

@@ -1,0 +1,25 @@
+.panel-header {
+  margin-bottom: 1rem;
+}
+
+.book-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.book-form label {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.form-message {
+  color: var(--accent-strong);
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-actions button {
+  margin: 0.33rem;
+}

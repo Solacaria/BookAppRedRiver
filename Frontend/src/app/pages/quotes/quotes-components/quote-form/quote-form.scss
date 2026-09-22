@@ -1,0 +1,26 @@
+.quote-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.quote-form label {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.quote-form textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.form-message {
+  color: var(--accent-strong);
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-actions button {
+  margin: 0.33rem;
+}

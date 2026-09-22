@@ -1,0 +1,38 @@
+<section class="panel">
+  <div class="panel-header section-header">
+    <h2>Alla citat</h2>
+    <span class="badge">{{ quotes.length }} citat</span>
+  </div>
+
+  @if (message) {
+    <p class="form-message">{{ message }}</p>
+  }
+
+  <div class="quote-list">
+    @for (quote of quotes; track quote.id) {
+      <article class="quote-card">
+        <div class="card-top">
+          <span class="badge">Citat #{{ quote.id }}</span>
+          <span>{{ quote.year }}</span>
+        </div>
+
+        <h3>“{{ quote.text }}”</h3>
+
+        <div class="quote-meta">
+          <span><i class="fa-solid fa-user-pen"></i> {{ quote.author }}</span>
+        </div>
+
+        <div class="card-actions">
+          <button type="button" class="btn btn-outline-secondary" (click)="editQuote(quote)">
+            <i class="fa-solid fa-pen"></i>
+            Redigera
+          </button>
+          <button type="button" class="btn btn-primary" (click)="deleteQuote(quote)">
+            <i class="fa-solid fa-trash"></i>
+            Radera
+          </button>
+        </div>
+      </article>
+    }
+  </div>
+</section>
