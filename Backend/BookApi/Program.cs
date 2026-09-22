@@ -47,7 +47,8 @@ builder.Services.AddCors(options => {
     {
         policy.WithOrigins(
             "http://localhost:4200",
-            "https://flourishing-swan-d3e235.netlify.app")
+            "https://flourishing-swan-d3e235.netlify.app",
+            "https://agent-6ab27e3ae5f330136--flourishing-swan-d3e235.netlify.app")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
